@@ -137,7 +137,6 @@ h1, h3{
     display: flex;
     background-color: var(--gray);
     color: var(--text);
-    text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
