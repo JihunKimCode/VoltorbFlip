@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const rowSumTop = document.createElement('div');
             rowSumTop.className = 'row-cell-top';
-            rowSumTop.textContent = `${sum}`;
+            rowSumTop.textContent = `${sum.toString().padStart(2, '0')}`;
             const rowSumBottom = document.createElement('div');
             rowSumBottom.className = 'row-cell-bottom';
             rowSumBottom.innerHTML = `<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/100.png' alt='Voltorb' width='35' height='35'> ${voltorbs}`;
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             const colSumTop = document.createElement('div');
             colSumTop.className = 'col-cell-top';
-            colSumTop.textContent = `${sum}`;
+            colSumTop.textContent = `${sum.toString().padStart(2, '0')}`;
             const colSumBottom = document.createElement('div');
             colSumBottom.className = 'col-cell-bottom';
             colSumBottom.innerHTML = `<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/100.png' alt='Voltorb' width='35' height='35'> ${voltorbs}`;
