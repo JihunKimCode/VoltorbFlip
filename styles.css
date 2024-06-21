@@ -1,0 +1,218 @@
+:root {
+    --background: #38A558;
+    --cell-hover: #008661;
+    --text: #000;
+    --border: #D0F0E7;
+    --border-hover: #FF2019;
+    --cell: #C68982;
+    --footer: #38A558; /* Footer background color */
+    --gray: #ccc; /* Gray color */
+    --gray-hover: #E2E2E2; /* Hover color */
+    --white: #fff;
+}
+
+
+body {
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    background-color: var(--background); /* Green background */
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 12px;
+    overflow: scroll;
+}
+
+h1, h3{
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 50%;
+    text-align: center;
+    color: var(--text);
+    margin-top: 20px;
+}
+
+#game-board-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 7px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.cell.revealed {
+    cursor: default;
+    background-color: var(--cell);
+    color: var(--text);
+}
+
+.cell:hover{
+    background-color: var(--cell-hover);
+    border: 2px solid var(--border-hover);
+} 
+
+.cell.revealed:hover{
+    background-color: var(--cell);
+    border: 2px solid var(--border);
+}
+
+#row-info{
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+}
+
+#row-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#col-info{
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.row-cell, .col-cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    color: var(--text);
+    border-radius: 3px;
+}
+
+.row-cell-bottom, .col-cell-bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--border);
+}
+
+.invisible-box {
+    visibility: hidden;
+    width: 60px; /* Make sure it matches the width of other cells */
+    height: 60px; /* Make sure it matches the height of other cells */
+}
+
+#status {
+    display: flex;
+    background-color: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 3px;
+    font-size: 14px;
+    justify-content: space-around;
+}
+
+.footer {
+    display: flex;
+    background-color: var(--gray);
+    color: var(--text);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    color: var(--text);
+    text-decoration: none;
+    font-style: italic;
+}
+
+footer a:hover{
+    color: var(--gray-hover);
+}
+
+.footicons{
+    font-size: 31px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--white);
+    margin-left: 10px;
+}
+
+.footicons .btn {
+    margin-right: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: var(--button-icon);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn.btn-github{
+    background-color: var(--text);
+}
+
+.btn.btn-github:hover{
+    color: var(--gray);
+}
+
+
+@media (max-width: 767px) {
+    .container{
+        width: 95%;
+    }
+
+    #status {
+        font-size: 10px;
+    }    
+
+    .cell{
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .row-cell, .col-cell {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+    
+    #game-board, #row-info{
+        grid-template-columns: repeat(5, 50px);
+    }
+
+    #col-info{
+        grid-template-columns: repeat(6, 50px);
+    }
+}

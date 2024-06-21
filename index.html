@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Website Thumbnail -->
+    <title>Voltorb Flip</title>
+    <meta property="og:url" content="https://jihunkimcode.github.io/VoltorbFlip/">
+    <meta property="og:title" content="Voltorb Flip">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-world/poke-ball.png">
+    <meta property="og:description" content="Voltorb Flip in HGSS">
+    <!-- Website Information -->
+    <meta name="author" content="Jihun Kim">
+    <meta name="keywords" content="Voltorb Flip">
+    <meta name="description" content="Voltorb Flip in HGSS">        
+    <!-- Website Settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-world/poke-ball.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>    
+</head>    
+<body>
+    <div class="container">
+        <h1>Voltorb Flip</h1>
+        <div id="status">
+            <p>Level: <span id="level">1</span></p><br>
+            <p>Coins: <span id="coins">0</span></p><br>
+            <p>Collected: <span id="collected">0</span></p>
+        </div>
+        <p id="message"></p>
+        <div id="game-board-container">
+            <div id="game-board"></div>
+            <div id="row-info"></div>
+        </div>
+        <div id="col-info"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footicons">
+            <a href="https://github.com/JihunKimCode/VoltorbFlip" class="btn btn-github" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <p>
+            Images are sourced from
+            <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>.
+            <br>© <span id="year"></span> Pokémon. © 1995-<span id="year2"></span> Nintendo/Creatures Inc./GAME FREAK inc.
+        </p>
+    <footer class="footer">
+
+    <script src="script.js"></script>
+</body>
+</html>
