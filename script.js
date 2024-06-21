@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let choice = [];
     let status = true;
     let consecutiveWins = 0; // Track consecutive wins
+    let previousLevel = 1; // Track previous level
 
     const setupGame = () => {
         // Reset board arrays and variables
@@ -27,6 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
         choice = [];
         collected = 0;
         status = true;
+        messageDisplay.textContent = '';
+
+        // Display level change message
+        if (level > previousLevel) {
+            messageDisplay.textContent = `Advanced to Game Lv.${level}!`;
+        } else if (level < previousLevel) {
+            messageDisplay.textContent = `Dropped to Game Lv. ${level}.`;
+        }
+        
+        // Clear the message after a few seconds
+        setTimeout(() => {
+            messageDisplay.textContent = '';
+        }, 1500);
+
+        // Update the previous level
+        previousLevel = level;
     
         // Assign new board configuration for the current level
         assignBoard(level);
@@ -36,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderRowInfo(); // Render row information
         renderColInfo(); // Render column information
         updateStatus(); // Update status displays (level, coins)
-        messageDisplay.textContent = ''; // Clear any previous messages
     };
     
     const assignBoard = (level) => {
