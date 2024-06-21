@@ -20,7 +20,7 @@ body {
     height: 100vh;
     margin: 0;
     font-size: 12px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 h1, h3{
